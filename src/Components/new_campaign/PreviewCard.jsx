@@ -35,6 +35,13 @@ function PreviewCard({ logo, title, info, img }) {
         <p className="prev_info">{info}</p>
         <img src={img} alt="" className="prev_img" />
       </div>
+      <div className="like">
+        <p>{title}</p>
+        <button>
+          <img src="/thumb.png" alt="" />
+          Like
+        </button>
+      </div>
 
       <div className="buttons" style={buttonStyle}>
         <Button
