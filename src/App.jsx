@@ -9,24 +9,24 @@ function App() {
       {/* sidebar */}
       <nav className="side">
         <div className="logo nav_items">
-          <img src="/public/zocket_logo.webp" alt="" />
+          <img src="/zocket_logo.webp" alt="" />
         </div>
         <div className="home nav_items">
-          <img src="/public/Frame 1.png" alt="" />
+          <img src="/Frame 1.png" alt="" />
           <p className="name">Home</p>
         </div>
         <Link to="/">
           <div className="campaign nav_items">
-            <img src="/public/Frame 7.png" alt="" />
+            <img src="/Frame 7.png" alt="" />
             <p className="name">Campaign</p>
           </div>
         </Link>
         <div className="products nav_items">
-          <img src="/public/Frame 4.png" alt="" />
+          <img src="/Frame 4.png" alt="" />
           <p className="name">Products</p>
         </div>
         <div className="customers nav_items">
-          <img src="/public/Frame 3.png" alt="" />
+          <img src="/Frame 3.png" alt="" />
           <p className="name">Customers</p>
         </div>
       </nav>
