@@ -118,6 +118,7 @@ function Dashboard() {
               title="Bluberry cake Campaign"
               img={camp1}
               status="Live now"
+              time_stamp={"14 July"}
             />
             <Campaign_list
               date="25 jul 2020 - 01 Aug 2020"
@@ -127,6 +128,7 @@ function Dashboard() {
               platform="facebook"
               title="Chocolate cake campaign"
               status="Paused"
+              time_stamp={"20 Jan"}
               img={camp2}
             />
             <Campaign_list
@@ -137,6 +139,7 @@ function Dashboard() {
               platform="facebook"
               title="Browine cake campaign"
               status="Exhausted"
+              time_stamp={"12 Jun"}
               img={camp3}
             />
             <Campaign_list
@@ -147,6 +150,7 @@ function Dashboard() {
               platform="youtube"
               title="Pumpkin cake camapign"
               status="Live now"
+              time_stamp={"28 feb"}
               img={camp4}
             />
             <Campaign_list
@@ -157,6 +161,7 @@ function Dashboard() {
               platform="google"
               title="Cup cakes campaign"
               status="Live now"
+              time_stamp={"10 Jul"}
               img={camp5}
             />
           </div>

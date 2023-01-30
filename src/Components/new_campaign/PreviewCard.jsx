@@ -25,10 +25,10 @@ function PreviewCard({ logo, title, info, img }) {
 
       <div className="logo_title">
         <img src={logo} alt="" className="prev_logo" />
-        <p className="prev_title">
-          <div className="ttl">{title}</div>
-          <div className="spnsr">Sponsored</div>
-        </p>
+        <div className="prev_title">
+          <p className="ttl">{title}</p>
+          <p className="spnsr">Sponsored</p>
+        </div>
       </div>
 
       <div className="info_image" onClick={() => setClick(!click)}>

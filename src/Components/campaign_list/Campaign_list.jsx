@@ -49,16 +49,16 @@ function Campaign_list({
       <p>{date}</p>
 
       {/* clicks */}
-      <p>{clicks}</p>
+      <p className="clicks">{clicks}</p>
 
       {/* budget */}
-      <p>{budget}</p>
+      <p className="budget">{budget}</p>
 
       {/* location */}
-      <p>{location}</p>
+      <p className="budget"> {location}</p>
 
       {/* platform */}
-      <p>
+      <p className="budget">
         {(platform == "facebook" && <BsFacebook color="blue" size="25px" />) ||
           (platform == "youtube" && (
             <AiFillYoutube color="red" size="25px" />
@@ -67,12 +67,12 @@ function Campaign_list({
       </p>
 
       {/* status */}
-      <p className="status" style={statusStyle}>
+      <p className="status budget" style={statusStyle}>
         {status}
       </p>
 
       {/* actions */}
-      <div className="actions">
+      <div className="actions budget">
         <HiOutlinePencil color="blue" className="action" />
         <RiDeleteBin6Line color="red" className="action" />
       </div>

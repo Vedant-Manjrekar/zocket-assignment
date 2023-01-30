@@ -88,3 +88,15 @@
   display: grid;
   place-items: center;
 }
+
+.c_list > .clicks {
+  text-align: left;
+  width: 100%;
+  position: relative;
+  left: 1rem;
+}
+
+.budget {
+  position: relative;
+  right: 1rem;
+}
