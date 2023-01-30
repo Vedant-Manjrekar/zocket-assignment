@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import "./dashboard.css";
 import {
@@ -9,7 +10,6 @@ import {
   Select,
 } from "@chakra-ui/react";
 import Campaign_list from "../campaign_list/Campaign_list";
-import { Link } from "react-router-dom";
 import camp1 from "/public/camp1.png";
 import camp2 from "/public/camp2.png";
 import camp3 from "/public/camp3.png";
@@ -34,7 +34,12 @@ function Dashboard() {
         </div>
         {/* create button */}
         <Link to="/create-campaign">
-          <Button backgroundColor="#0F6EFF" color="white" onClick={create}>
+          <Button
+            backgroundColor="#0F6EFF"
+            color="white"
+            onClick={create}
+            margin="0 3rem"
+          >
             <img src="/public/add-circle.png" className="add_cirlce" alt="" />
             Create new campaign
           </Button>

@@ -22,6 +22,7 @@ function PreviewCard({ logo, title, info, img }) {
       <div className="prev_tick" style={tickStyle}>
         <BsFillCheckCircleFill color="#0f6eff" className="tck" />
       </div>
+
       <div className="logo_title">
         <img src={logo} alt="" className="prev_logo" />
         <p className="prev_title">
@@ -29,10 +30,12 @@ function PreviewCard({ logo, title, info, img }) {
           <div className="spnsr">Sponsored</div>
         </p>
       </div>
+
       <div className="info_image" onClick={() => setClick(!click)}>
         <p className="prev_info">{info}</p>
         <img src={img} alt="" className="prev_img" />
       </div>
+
       <div className="buttons" style={buttonStyle}>
         <Button
           color={"#0f6eff"}
@@ -44,6 +47,7 @@ function PreviewCard({ logo, title, info, img }) {
         >
           Change Image
         </Button>
+
         <Button
           color={"#0f6eff"}
           bgColor={"#E7F0FF"}

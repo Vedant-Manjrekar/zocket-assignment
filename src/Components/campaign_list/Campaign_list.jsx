@@ -18,6 +18,7 @@ function Campaign_list({
   time_stamp,
   img,
 }) {
+  // styles for status.
   const statusStyle = {
     backgroundColor:
       (status == "Exhausted" && "#FFDEDE") ||
@@ -28,8 +29,6 @@ function Campaign_list({
       (status == "Live now" && "#317C2E") ||
       (status == "Paused" && "#D1A307"),
   };
-
-  console.log(status);
 
   return (
     <div className="c_list">
@@ -48,12 +47,16 @@ function Campaign_list({
 
       {/* date range */}
       <p>{date}</p>
+
       {/* clicks */}
       <p>{clicks}</p>
+
       {/* budget */}
       <p>{budget}</p>
+
       {/* location */}
       <p>{location}</p>
+
       {/* platform */}
       <p>
         {(platform == "facebook" && <BsFacebook color="blue" size="25px" />) ||
@@ -62,10 +65,12 @@ function Campaign_list({
           )) ||
           (platform == "google" && <FcGoogle size="25px" />)}
       </p>
+
       {/* status */}
       <p className="status" style={statusStyle}>
         {status}
       </p>
+
       {/* actions */}
       <div className="actions">
         <HiOutlinePencil color="blue" className="action" />
