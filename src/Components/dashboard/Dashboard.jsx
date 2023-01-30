@@ -10,15 +10,22 @@ import {
 } from "@chakra-ui/react";
 import Campaign_list from "../campaign_list/Campaign_list";
 import { Link } from "react-router-dom";
+import camp1 from "/public/camp1.png";
+import camp2 from "/public/camp2.png";
+import camp3 from "/public/camp3.png";
+import camp4 from "/public/camp4.png";
+import camp5 from "/public/camp5.png";
 
 function Dashboard() {
   function create() {
+    console.log("clicked");
     localStorage.setItem("progress", 0);
-    dispatchEvent(new Event("storage"));
+    const event = new Event("storage");
+    dispatchEvent(event);
   }
 
   return (
-    <div className="dashboard">
+    <div className="dashboard1">
       <div className="title_and_create">
         {/* title */}
         <div className="title_main">
@@ -26,8 +33,9 @@ function Dashboard() {
           <p>Check the list of campigns you created</p>
         </div>
         {/* create button */}
-        <Link to="/create-campaign" onClick={create}>
-          <Button backgroundColor="#0F6EFF" color="white">
+        <Link to="/create-campaign">
+          <Button backgroundColor="#0F6EFF" color="white" onClick={create}>
+            <img src="/public/add-circle.png" className="add_cirlce" alt="" />
             Create new campaign
           </Button>
         </Link>
@@ -101,9 +109,50 @@ function Dashboard() {
               clicks="300"
               budget="INR.3,400"
               location="Chennai"
-              platform="youtube"
-              title="Car decoration"
+              platform="facebook"
+              title="Bluberry cake Campaign"
+              img={camp1}
+              status="Live now"
+            />
+            <Campaign_list
+              date="25 jul 2020 - 01 Aug 2020"
+              clicks="300"
+              budget="INR.3,400"
+              location="Coimbatore"
+              platform="facebook"
+              title="Chocolate cake campaign"
+              status="Paused"
+              img={camp2}
+            />
+            <Campaign_list
+              date="25 jul 2020 - 01 Aug 2020"
+              clicks="300"
+              budget="INR.3,400"
+              location="Erode"
+              platform="facebook"
+              title="Browine cake campaign"
               status="Exhausted"
+              img={camp3}
+            />
+            <Campaign_list
+              date="25 jul 2020 - 01 Aug 2020"
+              clicks="300"
+              budget="INR.3,400"
+              location="Coimbatore"
+              platform="youtube"
+              title="Pumpkin cake camapign"
+              status="Live now"
+              img={camp4}
+            />
+            <Campaign_list
+              date="25 jul 2020 - 01 Aug 2020"
+              clicks="300"
+              budget="INR.3,400"
+              location="Coimbatore"
+              platform="google"
+              title="Cup cakes campaign"
+              status="Live now"
+              img={camp5}
             />
           </div>
         </div>

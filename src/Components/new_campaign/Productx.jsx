@@ -9,47 +9,46 @@ function Productx() {
         <Option
           head="Bluberry cake with raw toppings"
           info="Rs: 2,290"
-          // icon={<IoCall size="2vw" />}
+          icon="/prods1.png"
+          clicks={false}
         />
         <Option
           head="Chocolate truffle cake"
           info="Rs: 2,190"
-          // icon={<BiMessageDetail size="2vw" />}
+          icon="/prods2.png"
+          clicks={false}
         />
         <Option
           head="Browine cake with fluffy cream"
           info="Rs: 1,222"
-          // icon={<IoPersonAddOutline size="2vw" />}
+          icon="/prods3.png"
+          clicks={false}
         />
-        <Option
-          head="Ferro rocher cake"
-          info="Rs: 1,234"
-          // icon={<FiUsers size="2vw" />}
-        />
+        <Option head="Ferro rocher cake" info="Rs: 1,234" icon="/prods8.png" />
         <Option
           head="Custurd mixed with fruit cake"
           info="Rs: 2.456"
-          // icon={<AiOutlineEye size="2vw" />}
+          icon="/prods4.png"
+          clicks={false}
         />
         <Option
           head="Best raw topping choco cake"
           info="Rs: 2,345"
-          // icon={<BiPointer size="2vw" />}
+          icon="/prods5.png"
+          clicks={false}
         />
-        <Option
-          head="Green cup cakes"
-          info="Rs: 1,234"
-          // icon={<MdOutlineStorefront size="2vw" />}
-        />
+        <Option head="Green cup cakes" info="Rs: 1,234" icon="/prods9.png" />
         <Option
           head="Blueberry topping cakes"
           info="Rs: 2,456"
-          // icon={<RiInstallLine size="2vw" />}
+          icon="/prods6.png"
+          clicks={false}
         />
         <Option
           head="Strawberry cakes with blueberry"
           info="Rs: 2,345"
-          // icon={<TbClipboardText size="2vw" />}
+          icon="/prods7.png"
+          clicks={false}
         />
       </div>
       <Button

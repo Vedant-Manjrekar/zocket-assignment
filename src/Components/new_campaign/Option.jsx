@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./new_camp.css";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
-function Option({ head, info, icon }) {
+function Option({ head, info, icon, icon_outl, clicks }) {
   const [click, setClick] = useState(false);
 
   const optionStyles = {
@@ -20,7 +20,17 @@ function Option({ head, info, icon }) {
       style={optionStyles}
     >
       {/* Icon */}
-      <div className="icon">{icon}</div>
+      <div className="icon">
+        {clicks ? (
+          click ? (
+            <img src={icon} alt="" />
+          ) : (
+            <img src={icon_outl} alt="" />
+          )
+        ) : (
+          <img src={icon} alt="" />
+        )}
+      </div>
       <div className="info">
         <div className="main_title">{head}</div>
         <div className="more_info">{info}</div>

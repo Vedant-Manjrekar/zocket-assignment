@@ -14,9 +14,14 @@
 }
 
 .top {
-  height: 5vw;
+  height: 8vh;
   width: 95vw;
+  padding: 1rem;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1rem;
 }
 
 .dashboard {
@@ -27,4 +32,63 @@
   bottom: 0;
   width: 95vw;
   height: 92vh;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+img {
+  color: white;
+}
+
+.logo > img {
+  border-radius: 50%;
+  transform: scale(0.5);
+}
+
+.top > div {
+  cursor: pointer;
+}
+
+.name {
+  color: white;
+  width: 5vw;
+  text-align: center;
+}
+
+.nav_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.buy_plan {
+  width: max-content;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: #fef5ea;
+  color: #ff8c00;
+  border-radius: 6px;
+}
+
+.free_trial {
+  font-size: 0.8rem;
+  color: #606060;
+}
+
+.lang {
+  margin-right: 1rem;
+}
+
+.user_name {
+  font-size: 0.9rem;
 }

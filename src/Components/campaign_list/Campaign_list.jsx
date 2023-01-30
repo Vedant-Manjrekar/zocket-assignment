@@ -1,6 +1,5 @@
 import React from "react";
 import "./camp_list.css";
-import sampleImage from "/public/bow.jpeg";
 import { HiOutlinePencil } from "react-icons/hi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
@@ -17,16 +16,17 @@ function Campaign_list({
   platform,
   status,
   time_stamp,
+  img,
 }) {
   const statusStyle = {
     backgroundColor:
       (status == "Exhausted" && "#FFDEDE") ||
-      ("Live now" && "#E1FFE0") ||
-      ("Paused" && "#FFF8E0"),
+      (status == "Live now" && "#E1FFE0") ||
+      (status == "Paused" && "#FFF8E0"),
     color:
       (status == "Exhausted" && "#FC3F3F") ||
-      ("Live now" && "#317C2E") ||
-      ("Paused" && "#D1A307"),
+      (status == "Live now" && "#317C2E") ||
+      (status == "Paused" && "#D1A307"),
   };
 
   console.log(status);
@@ -39,7 +39,7 @@ function Campaign_list({
       <Switch colorScheme="blue" />
       {/* image and title */}
       <div className="img_title">
-        <img className="img" src={sampleImage} alt="thumbnail" />
+        <img className="img" src={img} alt="thumbnail" />
         <div className="title">
           <p>{title}</p>
           <p className="created">Created on {time_stamp}</p>
@@ -68,8 +68,8 @@ function Campaign_list({
       </p>
       {/* actions */}
       <div className="actions">
-        <HiOutlinePencil color="blue" />
-        <RiDeleteBin6Line color="red" />
+        <HiOutlinePencil color="blue" className="action" />
+        <RiDeleteBin6Line color="red" className="action" />
       </div>
     </div>
   );

@@ -11,26 +11,30 @@ import Campaign_Settings from "./Campaign_Settings";
 import Ready2Go from "./Ready2Go";
 
 function New_Campaign() {
-  const [progress, setProgress] = useState(
-    JSON.parse(localStorage.getItem("progress"))
-  );
-  console.warn(progress);
+  // state for storing current step number
+  const [progress, setProgress] = useState();
 
+  // function to add styles to the progress tracker.
   function addStyles(number) {
     document.getElementById(`stage-${number}`).style.backgroundColor =
       "#F29A2E";
     document.getElementById(`line-${number}`).style.backgroundColor = "#F29A2E";
   }
 
+  // useeffect to load styles if page is reloaded.
   useEffect(() => {
-    if (progress == 0) {
+    setProgress(JSON.parse(localStorage.getItem("progress")));
+
+    let progress = JSON.parse(localStorage.getItem("progress"));
+
+    if (progress === 0) {
       addStyles(1);
     }
-    if (progress == 1) {
+    if (progress === 1) {
       addStyles(1);
       addStyles(2);
     }
-    if (progress == 2) {
+    if (progress === 2) {
       addStyles(1);
       addStyles(2);
       addStyles(3);
@@ -39,13 +43,15 @@ function New_Campaign() {
       addStyles(1);
       addStyles(2);
       addStyles(3);
-      document.getElementById(`stage-4`).style.backgroundColor = "#F29A2E";
+      document.getElementById("stage-4").style.backgroundColor = "#F29A2E";
     }
   }, []);
 
+  // event listener to detect change in storage and load syles accordingly.
   window.addEventListener("storage", () => {
     setProgress(JSON.parse(localStorage.getItem("progress")));
-    if (progress == 0) {
+    let progress = JSON.parse(localStorage.getItem("progress"));
+    if (progress === 0) {
       addStyles(1);
     }
     if (progress == 1) {
@@ -66,18 +72,22 @@ function New_Campaign() {
   });
 
   return (
+    // campaign's base body
     <div className="new_camp">
+      {/* main title */}
       <div className="title_main">
         <h2>Your Ad Campaign</h2>
         <p>Launch your ad in just 4 easy steps</p>
       </div>
 
+      {/* progress tracking stages. */}
       <div className="stages">
         <div className="lines">
           <div className="line" id="line-1"></div>
           <div className="line" id="line-2"></div>
           <div className="line" id="line-3"></div>
         </div>
+
         {/* What you want to do */}
         <div className="stage_name">
           <div className="stage" id="stage-1">
@@ -85,6 +95,7 @@ function New_Campaign() {
           </div>
           <p>What you want to do</p>
         </div>
+
         {/* Choose product */}
         <div className="stage_name">
           <div className="stage" id="stage-2">
@@ -92,6 +103,7 @@ function New_Campaign() {
           </div>
           <p>Choose product</p>
         </div>
+
         {/* Campaign settings */}
         <div className="stage_name">
           <div className="stage" id="stage-3">
@@ -99,6 +111,7 @@ function New_Campaign() {
           </div>
           <p>Campaign settings</p>
         </div>
+
         {/* Ready to go */}
         <div className="stage_name">
           <div className="stage" id="stage-4">
@@ -107,6 +120,8 @@ function New_Campaign() {
           <p>Ready to go </p>
         </div>
       </div>
+
+      {/* if progress is 0 load, the following part, so on and so forth */}
       {(progress == 0 && (
         <DashBoard1
           step_no="1"

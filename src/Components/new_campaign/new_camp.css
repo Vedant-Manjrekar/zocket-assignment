@@ -37,10 +37,10 @@
 
 .choose_product {
   background-color: #ffff;
-  width: 90vw;
+  width: 95vw;
   height: stretch;
   position: absolute;
-  right: 2.5vw;
+  right: -0.5vw;
   padding-bottom: 1rem;
   transform: scale(0.9);
 }
@@ -131,7 +131,8 @@
 
 .icon {
   position: relative;
-  top: 0.5rem;
+  margin: auto;
+  top: 0;
 }
 
 .tick {
@@ -244,6 +245,8 @@
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
   place-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
 }
 
 .box {
@@ -253,4 +256,82 @@
   place-items: center;
   border-radius: 6px;
   border: 1px solid black;
+}
+
+.preview_card {
+  display: grid;
+  border: 1px solid #f3f3f3;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.logo_title {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.info_image {
+  display: grid;
+  gap: 1rem;
+}
+
+.prev_logo {
+  width: 6vh;
+  object-fit: contain;
+}
+
+.logo_title {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ttl {
+  font-weight: bold;
+}
+
+.spnsr {
+  font-size: 0.8rem;
+}
+
+.prev_info {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 0.8rem;
+}
+
+.info_image {
+  display: grid;
+  place-items: center;
+}
+
+.prev_img {
+  object-fit: contain;
+  width: 20vw;
+}
+
+.prev_title {
+  display: grid;
+  place-items: left;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.buttons {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.prev_tick {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  left: 0.5rem;
+}
+
+.tck {
+  position: absolute;
 }

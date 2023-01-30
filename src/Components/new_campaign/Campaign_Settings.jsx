@@ -10,32 +10,41 @@ import {
 import React, { useState } from "react";
 
 function Campaign_Settings() {
+  // state for budget range.
   const [sliderVal, setSliderVal] = useState(20000);
+
+  // state for radius range.
   const [radiusVal, setRadiusVal] = useState(3);
+
+  // state for timeline
   const [sliderSide, setSliderSide] = useState(false);
+
+  // state for location type toggler.
   const [locationSliderSide, setLocationSliderSide] = useState(false);
 
+  // dynamic styles for lifetime toggle.
   const lifetimeStyle = {
     backgroundColor: sliderSide ? "#0F6EFF" : "transparent",
     color: sliderSide ? "white" : "black",
   };
 
+  // dynamic styles for daily toggle.
   const dailyStyle = {
     backgroundColor: !sliderSide ? "#0F6EFF" : "transparent",
     color: !sliderSide ? "white" : "black",
   };
 
+  // dynamic styles for location toggle.
   const locationStyle = {
     backgroundColor: locationSliderSide ? "#0F6EFF" : "transparent",
     color: locationSliderSide ? "white" : "black",
   };
 
+  // dynamic styles for radius toggle.
   const radiusStyle = {
     backgroundColor: !locationSliderSide ? "#0F6EFF" : "transparent",
     color: !locationSliderSide ? "white" : "black",
   };
-
-  console.log(sliderVal);
 
   return (
     <div className="campaign_settings">
@@ -45,8 +54,12 @@ function Campaign_Settings() {
           <div className="first">1</div>
           <div className="title_1">Budget and dates info</div>
         </div>
+
+        {/* Budget timeline */}
         <div className="budget_timeline">
           <div className="title_2">Budget Timeline</div>
+
+          {/* budget timline toggle */}
           <div className="slider">
             <div
               className="lifetime"
@@ -64,6 +77,8 @@ function Campaign_Settings() {
             </div>
           </div>
         </div>
+
+        {/* start and end date */}
         <div className="start_end_date">
           <div className="start_date">
             <div className="title_2">Start date</div>
@@ -74,6 +89,8 @@ function Campaign_Settings() {
             <Input type="date" />
           </div>
         </div>
+
+        {/* Campaign Budget */}
         <div className="campaign_budget">
           <div className="camp_budg">
             <div className="title_2">Enter campaign budget</div>
@@ -246,6 +263,8 @@ function Campaign_Settings() {
               </select>
             </div>
           </div>
+
+          {/* Range slider for budget */}
           <Slider
             aria-label="slider-ex-1"
             onChange={(val) => {
@@ -277,6 +296,8 @@ function Campaign_Settings() {
             </SliderTrack>
             <SliderThumb />
           </Slider>
+
+          {/* minimum and maximum value */}
           <div className="minmax">
             <div className="min title_2">100</div>
             <div className="max title_2">1,00,000</div>
@@ -284,6 +305,7 @@ function Campaign_Settings() {
         </div>
       </div>
 
+      {/* Location info */}
       <div className="point2">
         <div className="point_title">
           <div className="first">2</div>
@@ -291,6 +313,8 @@ function Campaign_Settings() {
         </div>
         <div className="location_type">
           <div className="title_2">Location type</div>
+
+          {/* location type toggler */}
           <div className="slider">
             <div
               className="lifetime"
@@ -308,11 +332,15 @@ function Campaign_Settings() {
             </div>
           </div>
         </div>
+
+        {/* Select location type. */}
         <div
           className="select_location"
           style={{ display: !locationSliderSide ? "none" : "block" }}
         >
           <div className="title_2">Select loaction</div>
+
+          {/* location input for manual address */}
           <Input
             type="text"
             placeholder="Select a place name, address or coordinates"
@@ -323,6 +351,8 @@ function Campaign_Settings() {
           style={{ display: locationSliderSide ? "none" : "block" }}
         >
           <div className="title_2">Select target radius</div>
+
+          {/* location slider for radius */}
           <Slider
             aria-label="slider-ex-1"
             onChange={(val) => {
