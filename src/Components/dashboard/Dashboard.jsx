@@ -40,7 +40,7 @@ function Dashboard() {
             onClick={create}
             margin="0 3rem"
           >
-            <img src="/public/add-circle.png" className="add_cirlce" alt="" />
+            <img src="/add-circle.png" className="add_cirlce" alt="" />
             Create new campaign
           </Button>
         </Link>
